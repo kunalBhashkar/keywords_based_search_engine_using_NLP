@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Deep NLP App
+		</div>
+		<h2>Searching of VIQ number on the basis of Observation</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;">RESULT</p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Spam</h2>
+	{% elif prediction != 0%}
+	<center><i><h3 style="color:blue;">List of {VIQ,SubVIQ} number is : </h3></i><br><h2> {{ prediction }}</h2></center>
+	{% endif %}
+
+	</div>
+	<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+		<div>
+	<!--style="margin-right:auto; margin-left:auto; margin-top:400px; display:block"-->
+
+	<button style="margin-right:auto; margin-left:auto; display:block"  class="btn-info" onclick="goBack()">Go Back</button>
+	
+
+	
+	</div>
+
+</body>
+</html>

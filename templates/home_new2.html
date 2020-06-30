@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+ <head lang="en">
+  <meta charset="UTF-8">
+  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script language="JavaScript">
+    function showInput() {
+        var x =  document.getElementById("user_input1").value;
+       // alert(x);
+        
+		var hr = new XMLHttpRequest();
+		var url = "action_page.php"; //action="/.php" method="get"
+		var passedVal = myText;
+		//var myVal = "recipe_id=" + myText;
+
+		hr.open("GET", url, true);
+		hr.setRequestHeader("Content_type","application/x-www-form-urlencoded");
+		hr.onreadystatechange = function () {
+			if(hr.readyState == 4 && hr.status == 200) {
+				//var return_data = hr.responseText;
+				//document.getElementById("status").innerHTML = return_data;
+			}
+		}
+		hr.send(x);
+        //x var ko apne action pr send kro
+		//document.getElementById('display2').value =  document.getElementById("user_input2").value;
+		//document.getElementById('display3').value =  document.getElementById("user_input3").value;
+		//document.getElementById('display4').value =  document.getElementById("user_input4").value;
+		//document.getElementById('display5').value =  document.getElementById("user_input5").value;
+    }
+	
+	
+	
+
+
+  </script>
+
+  <script>
+ $(document).ready(function(){
+    $('.clr1').click(function(){
+        document.getElementById("display1").value = "";
+		document.getElementById("user_input1").value = "";
+    });
+});
+ $(document).ready(function(){
+    $('.clr2').click(function(){
+        document.getElementById("display2").value = "";
+		document.getElementById("user_input2").value = "";
+    });
+}); $(document).ready(function(){
+    $('.clr3').click(function(){
+        document.getElementById("display3").value = "";
+		document.getElementById("user_input3").value = "";
+    });
+}); $(document).ready(function(){
+    $('.clr4').click(function(){
+        document.getElementById("display4").value = "";
+		document.getElementById("user_input4").value = "";
+    });
+}); $(document).ready(function(){
+    $('.clr5').click(function(){
+        document.getElementById("display5").value = "";
+		document.getElementById("user_input5").value = "";
+    });
+});
+  </script>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> 
+	
+</head>
+<body>
+
+
+	<div class="col-12 text-center">
+	<header>
+			<div class="container">
+			<div id="brandname">
+							AUDERTEC SOLUTIONS LLP
+				<h4><b>Finding VIQ and Sub VIQ on the basis of Keywords using Deep NLP</b></h4>			
+			</div>
+			
+			
+		</div>
+		</header>
+	</div>
+		
+		
+		<div class="container">
+		 <div class="row">
+				  <div class="col-md-6">
+					   <!-- first form -->
+					<form >
+					 <div class="form-group">
+						   <label><b>1st Query</b></label><br/>
+						   <input type="text" name="message" id="user_input1" class="form-control">
+					</form>
+					</div>
+						  <input type="submit" onclick="showInput();" class="btn btn-primary btn-md"> 
+						  <input type="submit" name="clear" value="Clear" class="clr1 btn btn-success btn-md">
+						
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label><b>First Pass</b></label><br/>
+						<input type="text" name="message" id="display1"  class="form-control">						
+					</div>
+				</div>
+				 <div class="col-md-3">
+					  <div class="form-group">
+						<label><b>Second Pass</b></label><br/>
+						<input type="text" name="message" id="display1"  class="form-control">
+					  </div>
+					</div>
+				</div>
+			
+					  
+						<!-- second form -->
+			<div class="row">
+				 <div class="col-md-6">
+					<form action="/action_page.php" method="get">
+					 <div class="form-group">
+							<label><b>2nd Query</b></label><br/>
+							<input type="text" name="message" id="user_input2"  class="form-control">
+					</form>
+					</div>
+							<input type="submit" onclick="showInput();" class="btn btn-primary btn-md"> 
+							<input type="button" name="clear" value="Clear" onclick="clrfrm()"  class="clr2 btn btn-success btn-md">
+							
+					</div>	
+					<div class="col-md-3">
+					  <div class="form-group">
+						<label><b>First Pass</b></label><br/>
+						<input type="text" name="message" id="display2"  class="form-control">
+					  </div>
+					 </div>
+					  <div class="col-md-3">
+					  <div class="form-group">
+						<label><b>Second Pass</b></label><br/>
+						<input type="text" name="message" id="display2"  class="form-control">
+					  </div>
+					</div>
+			</div>			
+
+			
+						 <!-- third form -->
+			<div class="row">
+			    <div class="col-md-6">
+					<form action="{{ url_for('predict')}}" method="POST">
+					 <div class="form-group">
+							<label><b>3rd Query</b></label><br/>
+						   <input type="text" name="message" id="user_input3"  class="form-control">
+					</form>
+					</div>
+						  <input type="submit" onclick="showInput();" class="btn btn-primary btn-md"> 
+							<input type="button" name="clear" value="Clear" onclick="clrfrm()"  class="clr3 btn btn-success btn-md">
+								
+					</div>	
+					<div class="col-md-3">
+					  <div class="form-group">
+						<label><b>First Pass</b></label><br/>
+						<input type="text" name="message" id="display3"  class="form-control">
+					  </div>
+					</div>
+					<div class="col-md-3">
+					  <div class="form-group">
+						<label><b>Second Pass</b></label><br/>
+						<input type="text" name="message" id="display3"  class="form-control">
+					  </div>
+					</div>
+			</div>			
+	
+												  
+						 <!-- fourth form -->
+			<div class="row">
+			    <div class="col-md-6">
+					<form action="{{ url_for('predict')}}" method="POST">
+					 <div class="form-group">
+							<label><b>4th Query</b></label><br/>
+						   <input type="text" name="message" id="user_input4"  class="form-control">
+					</form>
+					</div>
+						  <input type="submit" onclick="showInput();" class="btn btn-primary btn-md"> 
+							<input type="button" name="clear" value="Clear" onclick="clrfrm()"  class="clr4 btn btn-success btn-md">
+							
+							
+				</div>	
+
+					<div class="col-md-3">
+					  <div class="form-group">
+						<label><b>First Pass</b></label><br/>
+						<input type="text" name="message" id="display4"  class="form-control">
+					  </div>
+					</div>
+					 <div class="col-md-3">
+					  <div class="form-group">
+						<label><b>Second Pass</b></label><br/>
+						<input type="text" name="message" id="display4"  class="form-control">
+					  </div>
+					</div>
+			</div>					
+						 <!-- fifth form -->
+			<div class="row">
+			    <div class="col-md-6">
+					<form action="{{ url_for('predict')}}" method="POST">
+					 <div class="form-group">
+							<label><b>5th Query</b></label><br/>
+						   <input type="text" name="message" id="user_input5"  class="form-control">
+					</form>
+					</div>
+						  <input type="submit" onclick="showInput();" class="btn btn-primary btn-md"> 
+							<input type="button" name="clear" value="Clear" onclick="clrfrm()"  class="clr5 btn btn-success btn-md">
+							
+
+				</div>
+			
+			   <div class="col-md-3">
+					  <div class="form-group">
+						<label><b>First Pass</b></label><br/>
+						<input type="text" name="message" id="display5"  class="form-control">
+					  </div>
+					</div>
+				<div class="col-md-3">
+					  <div class="form-group">
+						<label><b>Second Pass</b></label><br/>
+						<input type="text" name="message" id="display5"  class="form-control">
+					  </div>
+					</div>
+			</div>			
+		
+	
+	<!--	
+	
+	
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<center><p>Enter Your Message Here</p></center>
+		<!-- <input type="text" name="comment"/>
+		<center><textarea name="message" rows="4" cols="50"></textarea></center>
+		<br/>
+
+		<input style="margin-right:auto; margin-left:auto; display:block" type="submit" class="btn-info" value="submit">	
+		<input style="margin-right:auto; margin-left:auto; display:block" type="clear" class="btn-info" value="clear">
+
+
+		
+
+
+	</form>
+		
+	</div>
+	
+	-->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> 
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Deep NLP based App using Flask
+		</div>
+		<h2>Finding VIQ and Sub VIQ on the basis of Keyword</h2>
+		
+	</div>
+	</header>
+	
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<center><p>Enter Your Message Here</p></center>
+		<!-- <input type="text" name="comment"/> -->
+		<center><textarea name="message" rows="4" cols="50"></textarea></center>
+		<br/>
+
+		<input style="margin-right:auto; margin-left:auto; display:block" type="submit" class="btn-info" value="predict">
+
+
+	</form>
+		
+	</div>
+
+</body>
+</html>
