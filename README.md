@@ -44,22 +44,26 @@ $ docker run it flaskapp
 ```
 #### Another way 
 To run this project in another way you can follow the steps below,
-'''
-Firstly, install python, pip and NLTK then,
+
+```
+Firstly, install python, pip and NLTK then,.
+
+&& then type following command,
 
 $ pip install -r requirements.txt
+
 $ python app.py
 
-'''
 
+```
 ## NLTK installation
 
 * [NLTK installation on Window](https://www.nltk.org/install.html)
 
 #### References
-- #### [Deep learning for specific information extraction from unstructured texts](https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada)
-- #### [Keyphrase Extraction Using Deep Recurrent Neural Networks on Twitter](https://www.aclweb.org/anthology/D16-1080.pdf)
-- #### [Keywords Extraction with Deep Neural Network Model](https://www.sciencedirect.com/science/article/abs/pii/S092523121931687X)
+- ##### [Deep learning for specific information extraction from unstructured texts](https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada)
+- ##### [Keyphrase Extraction Using Deep Recurrent Neural Networks on Twitter](https://www.aclweb.org/anthology/D16-1080.pdf)
+- ##### [Keywords Extraction with Deep Neural Network Model](https://www.sciencedirect.com/science/article/abs/pii/S092523121931687X)
 
 Copyright © 2020 by Kunal Bhashkar, bhashkar.brand@gmail.com.
 All rights reserved. This software or any portion thereof
