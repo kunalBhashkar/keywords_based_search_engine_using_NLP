@@ -194,7 +194,7 @@ tensorboard==2.1.1
 tensorflow==1.13.2
 tensorflow-estimator==1.13.0
 tensorflow-estimator-2.0-preview==2.0.0
-tensorflow-gpu==2.1.0
+tensorflow-gpu==2.1.2
 tensorflow-gpu-estimator==2.1.0
 termcolor==1.1.0
 terminado==0.8.3
