@@ -64,8 +64,3 @@ $ python app.py
 - ##### [Deep learning for specific information extraction from unstructured texts](https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada)
 - ##### [Keyphrase Extraction Using Deep Recurrent Neural Networks on Twitter](https://www.aclweb.org/anthology/D16-1080.pdf)
 - ##### [Keywords Extraction with Deep Neural Network Model](https://www.sciencedirect.com/science/article/abs/pii/S092523121931687X)
-
-Copyright © 2020 by Kunal Bhashkar, bhashkar.brand@gmail.com.
-All rights reserved. This software or any portion thereof
-may not be reproduced or used in any manner whatsoever
-without the express written permission of the owner.
